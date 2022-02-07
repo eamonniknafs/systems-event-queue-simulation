@@ -1,11 +1,15 @@
-double getExp(double lambda){
-    return -1/lambda * Math.log(Math.random());
-}
+import java.lang.Math;
 
-public class Main {
-    public static void main(String[] args) {
-        double lambda = 0.5;
-        double exp = getExp(lambda);
-        System.out.println(exp);
+public class Exp{
+    public static double getExp(double lambda){
+        return Math.log(1-Math.random())/(-lambda);
+    }
+
+    public static void main(String[] args){
+        double lambda = Double.parseDouble(args[0]);
+        double N = Double.parseDouble(args[1]);
+        for (int i = 0; i < N; i++){
+            System.out.println(getExp(lambda));
+        }
     }
 }
