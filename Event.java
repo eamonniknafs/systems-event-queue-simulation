@@ -1,8 +1,13 @@
 public class Event{
     private char type;
-    private int time;
+    private double time;
 
-    public int getTime(){
+    public Event(char ty, double ti){ 
+        type = ty;
+        time = ti;
+    }
+
+    public double getTime(){
         return time;
     }
     
